@@ -1,0 +1,41 @@
+scenario,structure,n,seconds
+stack push+pop,ArrayStack,10000,0.0052238249918445945
+stack push+pop,LinkedStack,10000,0.006302698006038554
+queue enq+deq,ArrayQueue (circular),10000,0.007397587003652006
+queue enq+deq,LinkedQueue,10000,0.00596960200346075
+stack push+pop,ArrayStack,50000,0.021816538006532937
+stack push+pop,LinkedStack,50000,0.032994542008964345
+queue enq+deq,ArrayQueue (circular),50000,0.034577006998006254
+queue enq+deq,LinkedQueue,50000,0.03236180599196814
+stack push+pop,ArrayStack,100000,0.04332730300666299
+stack push+pop,LinkedStack,100000,0.09314090599946212
+queue enq+deq,ArrayQueue (circular),100000,0.07201638699916657
+queue enq+deq,LinkedQueue,100000,0.07335547299589962
+stack push+pop,ArrayStack,200000,0.09053582200431265
+stack push+pop,LinkedStack,200000,0.14496276099816896
+queue enq+deq,ArrayQueue (circular),200000,0.14743810199433938
+queue enq+deq,LinkedQueue,200000,0.145754102995852
+queue: circular vs naive,ArrayQueue (circular),1000,0.0005515289958566427
+queue: circular vs naive,Naive array queue (delete index 0),1000,0.02613224599917885
+insert at front,DynamicArray,1000,0.025544586998876184
+insert at front,SinglyLinkedList,1000,0.0003245919942855835
+random access,DynamicArray,1000,0.0004650250048143789
+random access,SinglyLinkedList,1000,0.012215122987981886
+queue: circular vs naive,ArrayQueue (circular),2000,0.0011938609968638048
+queue: circular vs naive,Naive array queue (delete index 0),2000,0.1179468159971293
+insert at front,DynamicArray,2000,0.11828044799040072
+insert at front,SinglyLinkedList,2000,0.0006137940072221681
+random access,DynamicArray,2000,0.0008742159989196807
+random access,SinglyLinkedList,2000,0.05323184399458114
+queue: circular vs naive,ArrayQueue (circular),4000,0.0024571599933551624
+queue: circular vs naive,Naive array queue (delete index 0),4000,0.4951635159959551
+insert at front,DynamicArray,4000,0.49739350100571755
+insert at front,SinglyLinkedList,4000,0.001255266004591249
+random access,DynamicArray,4000,0.00168397999368608
+random access,SinglyLinkedList,4000,0.24885265600460116
+queue: circular vs naive,ArrayQueue (circular),8000,0.005157471998245455
+queue: circular vs naive,Naive array queue (delete index 0),8000,2.2061798259965144
+insert at front,DynamicArray,8000,2.1104372080008034
+insert at front,SinglyLinkedList,8000,0.0034082000056514516
+random access,DynamicArray,8000,0.004683317994931713
+random access,SinglyLinkedList,8000,0.9231911319948267

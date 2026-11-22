@@ -1,0 +1,30 @@
+distribution            n  Deterministic (Median of    Randomized Quickselect  Built-in sorted() baseli
+random               1000                   1.34 ms                   0.42 ms                   0.10 ms
+random               5000                   6.06 ms                   1.27 ms                   0.48 ms
+random              10000                  12.21 ms                   2.49 ms                   1.03 ms
+random              50000                  63.57 ms                  16.41 ms                   6.30 ms
+random             100000                 135.53 ms                  33.92 ms                  13.75 ms
+random             200000                 262.02 ms                  74.59 ms                  30.25 ms
+sorted               1000                   0.92 ms                   0.24 ms                   0.01 ms
+sorted               5000                   5.24 ms                   1.64 ms                   0.03 ms
+sorted              10000                  10.54 ms                   2.54 ms                   0.06 ms
+sorted              50000                  55.40 ms                  15.34 ms                   0.27 ms
+sorted             100000                 111.03 ms                  36.37 ms                   0.54 ms
+sorted             200000                 224.75 ms                  72.55 ms                   1.27 ms
+reverse-sorted       1000                   1.09 ms                   0.26 ms                   0.01 ms
+reverse-sorted       5000                   6.19 ms                   1.63 ms                   0.03 ms
+reverse-sorted      10000                  12.45 ms                   3.41 ms                   0.06 ms
+reverse-sorted      50000                  64.83 ms                  18.89 ms                   0.28 ms
+reverse-sorted     100000                 134.74 ms                  27.96 ms                   0.56 ms
+reverse-sorted     200000                 273.04 ms                  61.99 ms                   1.47 ms
+many-duplicates      1000                   0.42 ms                   0.25 ms                   0.06 ms
+many-duplicates      5000                   2.61 ms                   1.13 ms                   0.32 ms
+many-duplicates     10000                   6.01 ms                   2.72 ms                   0.65 ms
+many-duplicates     50000                  24.38 ms                   8.05 ms                   3.32 ms
+many-duplicates    100000                  47.72 ms                  20.17 ms                   6.37 ms
+many-duplicates    200000                  91.45 ms                  67.71 ms                  12.77 ms
+sorted n=  500: first-pivot     0.75 ms | randomized   0.15 ms | deterministic   0.45 ms
+sorted n= 1000: first-pivot     2.28 ms | randomized   0.34 ms | deterministic   0.93 ms
+sorted n= 2000: first-pivot     6.65 ms | randomized   0.69 ms | deterministic   1.94 ms
+sorted n= 4000: first-pivot    18.87 ms | randomized   1.86 ms | deterministic   4.07 ms
+Charts saved to /Users/pvenkatesh/Documents/Soundarya-MS-Assignments/order-statistics-data-structures/results

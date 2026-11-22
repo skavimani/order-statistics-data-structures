@@ -1,0 +1,134 @@
+=== Machine ===
+Sat Nov 21 17:26:04 CST 2026
+ProductName:		macOS
+ProductVersion:		13.6.1
+BuildVersion:		22G313
+x86_64
+Python 3.12.3
+
+=== Unit tests ===
+test_append_get_set (test_data_structures.TestDynamicArray.test_append_get_set) ... ok
+test_find_and_errors (test_data_structures.TestDynamicArray.test_find_and_errors) ... ok
+test_insert_delete_matches_python_list (test_data_structures.TestDynamicArray.test_insert_delete_matches_python_list) ... ok
+test_access_and_shape_changes (test_data_structures.TestMatrix.test_access_and_shape_changes) ... ok
+test_errors (test_data_structures.TestMatrix.test_errors) ... ok
+test_math (test_data_structures.TestMatrix.test_math) ... ok
+test_tree (test_data_structures.TestRootedTree.test_tree) ... ok
+test_deletions_keep_tail_correct (test_data_structures.TestSinglyLinkedList.test_deletions_keep_tail_correct) ... ok
+test_insertions (test_data_structures.TestSinglyLinkedList.test_insertions) ... ok
+test_search_get_traverse_reverse (test_data_structures.TestSinglyLinkedList.test_search_get_traverse_reverse) ... ok
+test_queues_are_fifo_with_wraparound (test_data_structures.TestStacksAndQueues.test_queues_are_fifo_with_wraparound) ... ok
+test_stacks_are_lifo (test_data_structures.TestStacksAndQueues.test_stacks_are_lifo) ... ok
+test_all_equal (test_selection.TestSelection.test_all_equal) ... ok
+test_input_not_modified (test_selection.TestSelection.test_input_not_modified) ... ok
+test_invalid_arguments (test_selection.TestSelection.test_invalid_arguments) ... ok
+test_large_random (test_selection.TestSelection.test_large_random) ... ok
+test_many_duplicates (test_selection.TestSelection.test_many_duplicates) ... ok
+test_median_helper (test_selection.TestSelection.test_median_helper) ... ok
+test_negative_and_float_values (test_selection.TestSelection.test_negative_and_float_values) ... ok
+test_random_lists_many_sizes (test_selection.TestSelection.test_random_lists_many_sizes) ... ok
+test_single_element (test_selection.TestSelection.test_single_element) ... ok
+test_small_examples (test_selection.TestSelection.test_small_examples) ... ok
+test_sorted_and_reverse (test_selection.TestSelection.test_sorted_and_reverse) ... ok
+test_strings (test_selection.TestSelection.test_strings) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.144s
+
+OK
+
+=== Selection demo ===
+Data:           [7, 2, 9, 4, 4, 1, 8, 4, 6, 3, 5]
+Sorted (check): [1, 2, 3, 4, 4, 4, 5, 6, 7, 8, 9]
+k= 1  deterministic=1  randomized=1
+k= 3  deterministic=3  randomized=3
+k= 6  deterministic=4  randomized=4
+k=11  deterministic=9  randomized=9
+Median: 4
+
+=== Data structures demo ===
+DynamicArray: DynamicArray([15, 20, 30])
+Matrix after insert_row: Matrix([[1, 2], [3, 4], [5, 6]])
+Transpose: Matrix([[1, 3, 5], [2, 4, 6]])
+Stack pops: c b a
+Queue dequeues: a b c
+Linked list: 0 -> 1 -> 99 -> 3
+Reversed:    3 -> 99 -> 1 -> 0
+Tree preorder: ['CEO', 'CFO', 'CTO', 'Engineer'] height: 2
+
+=== Part 1 benchmark (about 1-2 minutes) ===
+distribution            n  Deterministic (Median of    Randomized Quickselect  Built-in sorted() baseli
+random               1000                   1.34 ms                   0.42 ms                   0.10 ms
+random               5000                   6.06 ms                   1.27 ms                   0.48 ms
+random              10000                  12.21 ms                   2.49 ms                   1.03 ms
+random              50000                  63.57 ms                  16.41 ms                   6.30 ms
+random             100000                 135.53 ms                  33.92 ms                  13.75 ms
+random             200000                 262.02 ms                  74.59 ms                  30.25 ms
+sorted               1000                   0.92 ms                   0.24 ms                   0.01 ms
+sorted               5000                   5.24 ms                   1.64 ms                   0.03 ms
+sorted              10000                  10.54 ms                   2.54 ms                   0.06 ms
+sorted              50000                  55.40 ms                  15.34 ms                   0.27 ms
+sorted             100000                 111.03 ms                  36.37 ms                   0.54 ms
+sorted             200000                 224.75 ms                  72.55 ms                   1.27 ms
+reverse-sorted       1000                   1.09 ms                   0.26 ms                   0.01 ms
+reverse-sorted       5000                   6.19 ms                   1.63 ms                   0.03 ms
+reverse-sorted      10000                  12.45 ms                   3.41 ms                   0.06 ms
+reverse-sorted      50000                  64.83 ms                  18.89 ms                   0.28 ms
+reverse-sorted     100000                 134.74 ms                  27.96 ms                   0.56 ms
+reverse-sorted     200000                 273.04 ms                  61.99 ms                   1.47 ms
+many-duplicates      1000                   0.42 ms                   0.25 ms                   0.06 ms
+many-duplicates      5000                   2.61 ms                   1.13 ms                   0.32 ms
+many-duplicates     10000                   6.01 ms                   2.72 ms                   0.65 ms
+many-duplicates     50000                  24.38 ms                   8.05 ms                   3.32 ms
+many-duplicates    100000                  47.72 ms                  20.17 ms                   6.37 ms
+many-duplicates    200000                  91.45 ms                  67.71 ms                  12.77 ms
+sorted n=  500: first-pivot     0.75 ms | randomized   0.15 ms | deterministic   0.45 ms
+sorted n= 1000: first-pivot     2.28 ms | randomized   0.34 ms | deterministic   0.93 ms
+sorted n= 2000: first-pivot     6.65 ms | randomized   0.69 ms | deterministic   1.94 ms
+sorted n= 4000: first-pivot    18.87 ms | randomized   1.86 ms | deterministic   4.07 ms
+Charts saved to /Users/pvenkatesh/Documents/Soundarya-MS-Assignments/order-statistics-data-structures/results
+
+=== Part 2 benchmark (about 1-2 minutes) ===
+stack push+pop         ArrayStack                         n=  10000       5.22 ms
+stack push+pop         LinkedStack                        n=  10000       6.30 ms
+queue enq+deq          ArrayQueue (circular)              n=  10000       7.40 ms
+queue enq+deq          LinkedQueue                        n=  10000       5.97 ms
+stack push+pop         ArrayStack                         n=  50000      21.82 ms
+stack push+pop         LinkedStack                        n=  50000      32.99 ms
+queue enq+deq          ArrayQueue (circular)              n=  50000      34.58 ms
+queue enq+deq          LinkedQueue                        n=  50000      32.36 ms
+stack push+pop         ArrayStack                         n= 100000      43.33 ms
+stack push+pop         LinkedStack                        n= 100000      93.14 ms
+queue enq+deq          ArrayQueue (circular)              n= 100000      72.02 ms
+queue enq+deq          LinkedQueue                        n= 100000      73.36 ms
+stack push+pop         ArrayStack                         n= 200000      90.54 ms
+stack push+pop         LinkedStack                        n= 200000     144.96 ms
+queue enq+deq          ArrayQueue (circular)              n= 200000     147.44 ms
+queue enq+deq          LinkedQueue                        n= 200000     145.75 ms
+queue: circular vs naive ArrayQueue (circular)              n=   1000       0.55 ms
+queue: circular vs naive Naive array queue (delete index 0) n=   1000      26.13 ms
+insert at front        DynamicArray                       n=   1000      25.54 ms
+insert at front        SinglyLinkedList                   n=   1000       0.32 ms
+random access          DynamicArray                       n=   1000       0.47 ms
+random access          SinglyLinkedList                   n=   1000      12.22 ms
+queue: circular vs naive ArrayQueue (circular)              n=   2000       1.19 ms
+queue: circular vs naive Naive array queue (delete index 0) n=   2000     117.95 ms
+insert at front        DynamicArray                       n=   2000     118.28 ms
+insert at front        SinglyLinkedList                   n=   2000       0.61 ms
+random access          DynamicArray                       n=   2000       0.87 ms
+random access          SinglyLinkedList                   n=   2000      53.23 ms
+queue: circular vs naive ArrayQueue (circular)              n=   4000       2.46 ms
+queue: circular vs naive Naive array queue (delete index 0) n=   4000     495.16 ms
+insert at front        DynamicArray                       n=   4000     497.39 ms
+insert at front        SinglyLinkedList                   n=   4000       1.26 ms
+random access          DynamicArray                       n=   4000       1.68 ms
+random access          SinglyLinkedList                   n=   4000     248.85 ms
+queue: circular vs naive ArrayQueue (circular)              n=   8000       5.16 ms
+queue: circular vs naive Naive array queue (delete index 0) n=   8000    2206.18 ms
+insert at front        DynamicArray                       n=   8000    2110.44 ms
+insert at front        SinglyLinkedList                   n=   8000       3.41 ms
+random access          DynamicArray                       n=   8000       4.68 ms
+random access          SinglyLinkedList                   n=   8000     923.19 ms
+Chart saved to /Users/pvenkatesh/Documents/Soundarya-MS-Assignments/order-statistics-data-structures/results
+
+=== ALL DONE ===
